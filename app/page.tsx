@@ -2,6 +2,8 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
+import Calculators from "./components/Calculators";
+import PaymentQR from "./components/PaymentQR";
 import Image from "next/image";
 import { ChevronRight, ShieldCheck, Clock, Award, CheckCircle } from "lucide-react";
 
@@ -67,6 +69,8 @@ export default function Home() {
 
       <Services />
 
+      <Calculators />
+
       {/* Corporate Standards Section */}
       <section className="py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -127,6 +131,8 @@ export default function Home() {
       <section id="contact">
         <ContactForm />
       </section>
+
+      <PaymentQR />
 
       <Footer />
     </main>

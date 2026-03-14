@@ -34,7 +34,9 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center space-x-10">
             <Link href="#services" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-brand-blue transition-colors">Services</Link>
+            <Link href="#calculators" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-brand-blue transition-colors">Calculators</Link>
             <Link href="#about" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-brand-blue transition-colors">About</Link>
+            <Link href="#payment" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-brand-blue transition-colors">Payment</Link>
             <Link href="#contact" className="text-[10px] font-black uppercase tracking-widest text-muted-foreground hover:text-brand-blue transition-colors">Contact</Link>
           </div>
 
