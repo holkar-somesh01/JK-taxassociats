@@ -27,8 +27,9 @@ const services = [
     tag: "Essential"
   },
   {
-    title: "Business Registration",
-    desc: "Seamless setup for MSME (Udyam), Trade Licenses, and various Business Formations.",
+    title: "Business Licenses & Registration",
+    desc: "Dedicated support for all essential business licenses and statutory registrations.",
+    features: ["FSSAI License", "MSME / UDYAM", "Trade License", "ISO Certification", "Trademark", "IEC License"],
     icon: Briefcase,
     tag: "Growth"
   },
@@ -45,10 +46,11 @@ const services = [
     tag: "Legal"
   },
   {
-    title: "Audit & Compliance",
-    desc: "Expert Tax Audit assistance, FSSAI Licensing, and Court drafting for excellence.",
+    title: "Audit Services",
+    desc: "Professional auditing to ensure statutory compliance and financial integrity.",
+    features: ["Tax Audit", "GST Audit", "Internal Audit", "Statutory Compliance"],
     icon: ClipboardCheck,
-    tag: "Compliance"
+    tag: "Audit"
   }
 ];
 
@@ -122,9 +124,21 @@ export default function Services() {
                 {s.title}
               </h3>
 
-              <p className="text-base text-muted-foreground leading-relaxed mb-10 flex-grow">
-                {s.desc}
-              </p>
+              <div className="flex-grow mb-10">
+                <p className="text-base text-muted-foreground leading-relaxed mb-6">
+                  {s.desc}
+                </p>
+                {s.features && (
+                  <ul className="grid grid-cols-2 gap-y-3 gap-x-4">
+                    {s.features.map((f, fi) => (
+                      <li key={fi} className="text-[10px] font-black text-foreground flex items-center gap-2 uppercase tracking-tight">
+                        <span className="w-2 h-[2px] bg-brand-blue" />
+                        {f}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
 
               <div className="flex items-center gap-3 text-brand-blue font-black text-xs uppercase tracking-[0.2em] group/btn cursor-pointer">
                 Learn More
